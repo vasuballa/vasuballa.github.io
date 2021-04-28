@@ -1,0 +1,39 @@
+current directory: /home/vasu/blog/vasuballa.github.io/vendor/bundle/ruby/2.5.0/gems/bigdecimal-3.0.0/ext/bigdecimal
+/usr/bin/ruby -r ./siteconf20210427-126879-1j48oge.rb extconf.rb
+checking RUBY_BIGDECIMAL_VERSION... 3.0.0
+checking for labs() in stdlib.h... yes
+checking for llabs() in stdlib.h... yes
+checking for finite() in math.h... yes
+checking for isfinite() in math.h... no
+checking for struct RRational in ruby.h... no
+checking for rb_rational_num() in ruby.h... yes
+checking for rb_rational_den() in ruby.h... yes
+checking for struct RComplex in ruby.h... no
+checking for rb_complex_real() in ruby.h... no
+checking for rb_complex_imag() in ruby.h... no
+checking for rb_array_const_ptr() in ruby.h... yes
+checking for rb_sym2str() in ruby.h... yes
+checking for rb_opts_exception_p() in ruby.h... no
+checking for rb_category_warn() in ruby.h... no
+checking for RB_WARN_CATEGORY_DEPRECATED in ruby.h... no
+creating Makefile
+
+current directory: /home/vasu/blog/vasuballa.github.io/vendor/bundle/ruby/2.5.0/gems/bigdecimal-3.0.0/ext/bigdecimal
+make "DESTDIR=" clean
+rm -f 
+rm -f bigdecimal.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /home/vasu/blog/vasuballa.github.io/vendor/bundle/ruby/2.5.0/gems/bigdecimal-3.0.0/ext/bigdecimal
+make "DESTDIR="
+gcc -I. -I/usr/include -I/usr/include/ruby/backward -I/usr/include -I. -DRUBY_BIGDECIMAL_VERSION=\"3.0.0\" -DHAVE_LABS -DHAVE_LLABS -DHAVE_FINITE -DHAVE_RB_RATIONAL_NUM -DHAVE_RB_RATIONAL_DEN -DHAVE_RB_ARRAY_CONST_PTR -DHAVE_RB_SYM2STR    -fPIC -O2 -g -pipe -Wall -Werror=format-security -Wp,-D_FORTIFY_SOURCE=2 -Wp,-D_GLIBCXX_ASSERTIONS -fexceptions -fstack-protector-strong -grecord-gcc-switches -specs=/usr/lib/rpm/redhat/redhat-hardened-cc1 -specs=/usr/lib/rpm/redhat/redhat-annobin-cc1 -mtune=generic -fasynchronous-unwind-tables -fstack-clash-protection -fcf-protection -fPIC -m64 -o bigdecimal.o -c bigdecimal.c
+bigdecimal.c: In function ‘BigDecimal_precision’:
+bigdecimal.c:434:19: warning: ‘precision’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+         precision += (ex - 1) * BASE_FIG;
+rm -f bigdecimal.so
+gcc -shared -o bigdecimal.so bigdecimal.o -L. -L/usr/lib64 -L. -Wl,-z,relro  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -fstack-protector-strong -rdynamic -Wl,-export-dynamic -Wl,-z,relro  -Wl,-z,now -specs=/usr/lib/rpm/redhat/redhat-hardened-ld -m64  -m64  -lruby    -lc
+
+current directory: /home/vasu/blog/vasuballa.github.io/vendor/bundle/ruby/2.5.0/gems/bigdecimal-3.0.0/ext/bigdecimal
+make "DESTDIR=" install
+/usr/bin/mkdir -p . ./.gem.20210427-126879-8objnu
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 bigdecimal.so ./.gem.20210427-126879-8objnu
