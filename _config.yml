@@ -24,7 +24,9 @@ author: Vasu Balla
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Oracle docs: "https://docs.oracle.com"
+    - OCI reference arch: "https://docs.oracle.com/solutions/"
+    - OCI Cost estimator: "https://www.oracle.com/cloud/costestimator.html"
     - Learn markdown: "https://www.markdowntutorial.com/"
   Author's home: "https://r12dba.com"
 
@@ -54,14 +56,14 @@ round-avatar: false
 social-network-links:
   email: "vasu@r12dba.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
-  facebook: vasuballa
+#  facebook: vasuballa
   github: vasuballa
   twitter: r12dba
-  patreon: 
-  youtube: c/vasuballa
+#  patreon: 
+#  youtube: c/vasuballa
   medium: vasu.balla
 #  reddit: yourname
-#  linkedin: daattali
+  linkedin: vasuballa
 #  xing: yourname
 #  stackoverflow: "3943160/daattali"
 #  snapchat: deanat78
@@ -91,7 +93,7 @@ rss-description: This website is a virtual proof that I'm awesome :)
 # Select which social network share links to show in posts
 share-links-active:
   twitter: true
-  facebook: true
+  facebook: false
   linkedin: true
   vk: false
 
