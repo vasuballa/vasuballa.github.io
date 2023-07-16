@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Deploy Debian on Oracle Cloud Infrastructure 
-subtitle: Get to know how to deploy Debian offical image on OCI
-gh-repo: daattali/beautiful-jekyll
-gh-badge: [star, fork, follow]
+description: Get to know how to deploy Debian offical image on OCI
+img: debian.jpg # Add image post (optional)
+fig-caption: # Add figcaption (optional)
 tags: [debian, oci]
 comments: true
 ---
