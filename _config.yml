@@ -8,12 +8,12 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: Vasu Balla # add your name
 author-img: vasu.jpeg # add your photo
-about-author: I am a Cloud Architect specialized in Oracle workloads migration to cloud. Always hungry to learn more. Opinions expressed here of my own # add description
+about-author: I am a Cloud Architect with zeal to learn and wit to execute complex projects. Specialized in managing and migrating Oracle workloads to cloud. Opinions expressed here of my own not my employer # add description
 social-twitter: r12dba # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: vasuballa # add your Github handle
 social-linkedin: vasuballa # add your Linkedin handle
-social-email: # add your Email address
+social-email: vasu[dot]balla@outlook.com # add your Email address
 
 # Disqus
 discus-identifier:  # add your discus identifier
