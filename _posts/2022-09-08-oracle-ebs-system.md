@@ -10,7 +10,7 @@ comments: true
 
 For a long time, after the introduction of Online patching with EBS 12.2 release, there were no major changes to the underlying database architecture in Oracle E-Business Suite. With Oracle EBS 12.2, Edition based redefinition (EBR) feature was introduced to power the Online Patching feature. Online patching feature helped reduce the downtime requirements of E-Business Suite by enabling the ability to apply the major part of any E-Business Suite patch while the system is up and running, hence the name Online patching.
 
-![Oracle EBS Database Schemas]({{site.baseurl}}/assets/img/oracle-ebs-system.gif){: .mx-auto.d-block :}
+![Oracle EBS Database Schemas]({{site.baseurl}}/assets/img/oracle-ebs-system.gif){: .center :}
 
 For a long time, Oracle E-Business Suite Schema remained consistent and looked like the above table, with R12.2 adding some EBR specific objects such as Edition Views and Triggers. However, with EBS 12.2 ATG_PF Delta13 patch, the Oracle EBS development team introduced a new schema called EBS_SYSTEM. Interestingly, this schema’s password needs to be kept the same as the current database System user. I wondered why the Oracle Dev Team introduced this schema and here is my take on it.
 
