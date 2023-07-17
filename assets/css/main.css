@@ -789,6 +789,7 @@ img {
   max-width: 100%;
   vertical-align: middle;
   display: inline-block;
+  margin: auto;
 }
 
 img + em {
@@ -1478,10 +1479,4 @@ a.newer-posts:hover {
   .post .post-content .post-title a {
     font-size: 21px;
   }
-}
-
-.center img {        
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
 }
