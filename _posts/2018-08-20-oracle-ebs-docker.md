@@ -14,7 +14,8 @@ Many are aware that Oracle nowadays ships Vision Instance as single node virtual
 
 Let's get started with downloading the Oracle EBS 12.2.7 Vision instance image from Oracle Software Delivery Cloud aka edelivery.oracle.com. Search for "Oracle VM Virtual Appliance for Oracle E-Business Suite 12.2.7" on that website and download all the zip files related to it. Follow the process described in the README file in the zip file, and extract/build the OVA file. This OVA image is close 70 gigs in size, and an extracted VM image takes close to 250 gigs, so make sure you have at least half a terabyte of disk space to play with. Extract this ova file with tar command and it will give a vmdk disk image of the whole VM. 
 
-```[root@docker EBS1227]# tar -xvf 1227.ova 
+```
+[root@docker EBS1227]# tar -xvf 1227.ova 
 -rw------- someone/someone 11601 2018-01-31 09:59 Oracle-E-Business-Suite-12.2.7_VISION_INSTALL.ovf 
 -rw------- someone/someone 73656125952 2018-01-31 12:59 Oracle-E-Business-Suite-12.2.7_VISION_INSTALL-disk001.vmdk 
 [root@docker EBS1227]# 
