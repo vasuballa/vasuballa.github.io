@@ -2,8 +2,8 @@
 layout: post
 title: Oracle EBS Vision Instance on docker
 description: Oracle EBS Vision Instance on docker
-img: orcl-docker.ong # Add image post (optional)
-fig-caption: # Add figcaption (optional)
+img: orcl-docker.png #Add image post (optional)
+fig-caption: #Add figcaption (optional)
 tags: [docker, oracleebs, oracle, linux]
 comments: true
 ---

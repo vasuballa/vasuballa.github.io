@@ -2,8 +2,8 @@
 layout: post
 title: Setting up Docker on Oracle Linux
 description: Setting up Docker on Oracle Linux
-img: orcl-docker.ong # Add image post (optional)
-fig-caption: # Add figcaption (optional)
+img: orcl-docker.png #Add image post (optional)
+fig-caption: #Add figcaption (optional)
 tags: [docker, k8s, oracle, linux]
 comments: true
 ---
