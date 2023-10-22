@@ -35,7 +35,7 @@ SQL>
 
 After further research to determine if it’s feasible to enable this feature on Red Hat Linux, I found this old blog post from 2013 that talked about enabling this feature on Red Hat. With newer versions of Linux and Oracle database, the rpms and rpm signature it refers to have changed. After s-tracing and going over the logs, I managed to get the same fix working again for Red Hat/Centos 7 and Oracle Database 19c. Follow the steps below to get it working again:
 
-# rename rpm exe and create a wrapper around it trick oracle to think oraclelinux-release rpm is installed
+## rename rpm exe and create a wrapper around it trick oracle to think oraclelinux-release rpm is installed
 
 ```
 [root@cenos7-test bin]# pwd
@@ -53,7 +53,7 @@ fi
 [root@cenos7-test bin]# chmod +x rpm
 ```
 
-# create below file as well
+## create below file as well
 
 ```
 [root@cenos7-test bin]# vi /etc/oracle-release
