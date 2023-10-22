@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Oracle E-Business Suite: Virtual host names
-description: Oracle E-Business Suite: Virtual host names
+title: Oracle E-Business Suite - Virtual host names
+description: Oracle E-Business Suite - Virtual host names
 img: oracle-ebs-r12.png # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [ssl, oracleebs, virtualhosts, HA, DR]
