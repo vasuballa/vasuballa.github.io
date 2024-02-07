@@ -82,6 +82,11 @@ Register an account in Zenconsole Cloud Portal. Connect and start managing throu
 # zenarmorctl cloud register
 ```
 
+After the zenarmor agent is installed, go to the zenarmor dashboard and configure the firewall to be in L3 routed mode, tag ens3 as wan interface and tag ens5 as lan interface as shown below
+
+![Zenarmor config]({{site.baseurl}}/assets/img/oci-fw-img6.png)
+
+
 ## Configure the route tables
 
 Create Two route tables. One for outbound subnet that routes all traffic to the internet gateway. Assign this route table to OUT subnet
