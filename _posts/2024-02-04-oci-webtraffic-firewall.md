@@ -108,6 +108,10 @@ Above policy blocks any connections to r12dba.com and allows connections to ecli
 ![Test results]({{site.baseurl}}/assets/img/oci-fw-img5.png)
 
 
-Any questions about this solutions, reach out to me via [Linkedin](https://linkedin.com/in/vasuballa)
+As you can see, the connection to r12dba.com got dropped and we can got response from eclipsys.ca. 
+
+## Conclusion
+
+We dont need fancy firewalls that cost an arm and a leg to achieve this Layer7 filtering. We can achieve this easily and cost effectivelyu with a Ubuntu VM along with Zenarmor subscription. Any questions about this solutions, reach out to me via [Linkedin](https://linkedin.com/in/vasuballa)
 
 
