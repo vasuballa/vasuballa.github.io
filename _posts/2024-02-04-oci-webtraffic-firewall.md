@@ -17,15 +17,15 @@ This solution uses [Zenarmor](https://www.zenarmor.com/zenarmor-secure-web-gatew
 
 To deploy this architecture, here are the high level steps
 
-1) Create a public subnet that firewall VM uses to send traffic out to Internet
-2) Create a private subnet that firewall receives that traffic from Internal IPs that is destined to the internet
-3) Deploy a Ubuntu 22.04 LTS VM on public subnet which will be used as Firewall 
-4) Attach a VNIC from private subnet to Ubuntu Firewall VM
-5) Configure the Ubuntu to route traffic from Private Subnet to Public Subnet
-6) Update routing table of private subnet & pubic subnet to make traffic goes via Firewall VM private nic
-6) Deploy and Activate Zenarmor Agent on Ubuntu Firewall VM
-7) Enable URL filtering using polices on Zenarmor dashboard
-8) Update route tables of private subnets to point the 0.0.0.0/0 route to Firewall Private IP 
+1. Create a public subnet that firewall VM uses to send traffic out to Internet
+2. Create a private subnet that firewall receives that traffic from Internal IPs that is destined to the internet
+3. Deploy a Ubuntu 22.04 LTS VM on public subnet which will be used as Firewall 
+4. Attach a VNIC from private subnet to Ubuntu Firewall VM
+5. Configure the Ubuntu to route traffic from Private Subnet to Public Subnet
+6. Update routing table of private subnet & pubic subnet to make traffic goes via Firewall VM private nic
+7. Deploy and Activate Zenarmor Agent on Ubuntu Firewall VM
+8. Enable URL filtering using polices on Zenarmor dashboard
+9. Update route tables of private subnets to point the 0.0.0.0/0 route to Firewall Private IP 
 
 
 ## Create Subnets
