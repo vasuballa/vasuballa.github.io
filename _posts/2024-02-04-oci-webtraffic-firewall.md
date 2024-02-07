@@ -8,7 +8,7 @@ tags: [firewall, oci, ubuntu, zenarmor]
 comments: true
 ---
 
-The default firewall features in Oracle Cloud Infrastructure (OCI) are provided using Security Lists(SL) and Network Security Groups(NSG). These work on Layer3 level that is they filter traffic based on to/from IP Address of the host. But in most cases, Customers want to block all outgoing internet traffic and open traffic only to specific URLs like yum repos, public cloud based application URLs for REST API integrations. Fullfilling this requirement using SL & NSG is very difficut, as IP addresses of Cloud hosted applications sometimes keep changing because of CDN usage. A better way to meet this requirement is to use a firewall that provides layer7 filting like Fortigate, Palo Alto etc. Oracle has their own offering in this area called OCI Network Firewall Service. OCI NFW costs about $2500 a month. Forigate and Paloalto are not much cheap either. Their price ranges from $500 to $1500 a month. This made me look for other opensource/commercial solutions that are much cheaper to deploy and use. Below architeture describes a solution that provides layer7 filtering while being light on your wallet. 
+The default firewall features in Oracle Cloud Infrastructure (OCI) are provided using Security Lists(SL) and Network Security Groups(NSG). These work on Layer3 level that is they filter traffic based on to/from IP Address of the host. But in most cases, Customers want to block all outgoing internet traffic and open traffic only to specific URLs like yum repos, public cloud based application URLs for REST API integrations. Fullfilling this requirement using SL & NSG is very difficut, as IP addresses of Cloud hosted applications sometimes keep changing because of CDN usage. A better way to meet this requirement is to use a firewall that provides layer7 filtering like Fortigate, Palo Alto etc. Oracle has their own offering in this area called [OCI Network Firewall Service](https://www.oracle.com/security/cloud-security/network-firewall/). OCI NFW costs about $2500 a month. Forigate and Paloalto are not much cheap either. Their price ranges from $500 to $1500 a month. This made me look for other opensource/commercial solutions that are much cheaper to deploy and use. Below architeture describes a solution that provides layer7 filtering while being light on your wallet. 
 
 This solution uses [Zenarmor](https://www.zenarmor.com/zenarmor-secure-web-gateway), a Secure web gateway product from Sunny Valley Cyber Security Inc running on a ubuntu VM. This setup only costs abouts $50 a month. Here is how the architecture loks like
 
@@ -19,13 +19,12 @@ To deploy this architecture, here are the high level steps
 
 1. Create a public subnet that firewall VM uses to send traffic out to Internet
 2. Create a private subnet that firewall receives that traffic from Internal IPs that is destined to the internet
-3. Deploy a Ubuntu 22.04 LTS VM on public subnet which will be used as Firewall 
-4. Attach a VNIC from private subnet to Ubuntu Firewall VM
-5. Configure the Ubuntu to route traffic from Private Subnet to Public Subnet
-6. Update routing table of private subnet & pubic subnet to make traffic goes via Firewall VM private nic
+3. Deploy a Ubuntu 22.04 LTS VM on public (OUT) subnet which will be used as Firewall 
+4. Attach a VNIC from private (IN) subnet to Ubuntu Firewall VM
+5. Configure the Ubuntu VM firewall to route traffic from Private NIC to Public NIC
+6. Update routing table of private subnets & pubic subnet to make traffic go via Firewall VM private nic IP
 7. Deploy and Activate Zenarmor Agent on Ubuntu Firewall VM
 8. Enable URL filtering using polices on Zenarmor dashboard
-9. Update route tables of private subnets to point the 0.0.0.0/0 route to Firewall Private IP 
 
 
 ## Create Subnets
@@ -117,6 +116,6 @@ As you can see, the connection to r12dba.com got dropped and we can got response
 
 ## Conclusion
 
-We dont need fancy firewalls that cost an arm and a leg to achieve this Layer7 filtering. We can achieve this easily and cost effectivelyu with a Ubuntu VM along with Zenarmor subscription. Any questions about this solutions, reach out to me via [Linkedin](https://linkedin.com/in/vasuballa)
+We dont need fancy firewalls that cost an arm and a leg to achieve this Layer7 filtering. We can do this easily and cost effectively with a Ubuntu VM along with Zenarmor subscription. We can take this solution to next level using 2 VMs for high availability as well as deploy in a hub-spoke model. Any questions about this solution, reach out to me via [Linkedin](https://linkedin.com/in/vasuballa)
 
 
