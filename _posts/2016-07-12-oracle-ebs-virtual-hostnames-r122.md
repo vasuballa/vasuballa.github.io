@@ -38,8 +38,10 @@ libfakehostname64.so.1 libfakehostname.so.1
 [applmgr@apps ~]$ export LD_PRELOAD="libfakehostname.so.1" 
 
 #test the fake hostname 
-[applmgr@apps ~]$ hostname apps.example.com 
+[applmgr@apps ~]$ hostname
+apps.example.com 
 [applmgr@apps ~]$ export MYHOSTNAME=virtapps.example.com 
-[applmgr@apps ~]$ hostname virtapps.example.com
+[applmgr@apps ~]$ hostname
+virtapps.example.com
 ```
 Now all EBS services that run under applmgr user will use the virtual hostname
